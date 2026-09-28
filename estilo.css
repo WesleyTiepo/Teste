@@ -1,0 +1,676 @@
+/* =========================================================
+   IMPORTAÇÃO DAS FONTES
+   ========================================================= */
+
+/* Importa fontes externas do Google Fonts. */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700&display=swap');
+
+
+/* =========================================================
+   CONFIGURAÇÃO GERAL
+   ========================================================= */
+
+/* Seleciona todos os elementos da página. */
+* {
+
+    /* Faz padding e border entrarem no cálculo da largura total. */
+    box-sizing: border-box;
+
+}
+
+
+/* Configura toda a página. */
+body {
+
+    /* Remove a margem padrão do navegador. */
+    margin: 0;
+
+    /* Cria espaço interno nas bordas da página. */
+    padding: 40px 25px;
+
+    /* Define Montserrat como fonte principal. */
+    font-family: 'Montserrat', Arial, sans-serif;
+
+    /* Define a cor padrão dos textos. */
+    color: #FFFFFF;
+
+    /* Centraliza elementos inline, incluindo os cards. */
+    text-align: center;
+
+    /* Cria um fundo escuro inspirado nas cores neon do GTA VI. */
+    background: linear-gradient(
+        135deg,
+        #090014,
+        #21002F,
+        #520050,
+        #8F175F
+    );
+
+    /* Faz o fundo ocupar pelo menos toda a altura da tela. */
+    min-height: 100vh;
+
+}
+
+
+/* =========================================================
+   TÍTULO PRINCIPAL
+   ========================================================= */
+
+/* Estiliza o título principal. */
+h1 {
+
+    /* Usa uma fonte de destaque semelhante a pôsteres. */
+    font-family: 'Bebas Neue', Impact, sans-serif;
+
+    /* Define um tamanho grande para o título. */
+    font-size: 52px;
+
+    /* Centraliza o título. */
+    text-align: center;
+
+    /* Usa branco para criar contraste com o fundo escuro. */
+    color: #FFFFFF;
+
+    /* Cria espaço abaixo do título. */
+    margin: 0 auto 15px auto;
+
+    /* Limita a largura para facilitar a leitura. */
+    max-width: 1100px;
+
+    /* Aumenta o espaço entre as letras. */
+    letter-spacing: 2px;
+
+    /* Cria efeito de sombra neon. */
+    text-shadow:
+        3px 3px 0 #FF2D95,
+        6px 6px 0 #6D28D9;
+
+}
+
+
+/* =========================================================
+   INTRODUÇÃO
+   ========================================================= */
+
+/* Seleciona somente o parágrafo introdutório. */
+body > p {
+
+    /* Limita a largura do texto. */
+    max-width: 900px;
+
+    /* Centraliza e cria espaço abaixo. */
+    margin: 0 auto 40px auto;
+
+    /* Centraliza o texto. */
+    text-align: center;
+
+    /* Define o tamanho do texto. */
+    font-size: 18px;
+
+    /* Aumenta a distância entre as linhas. */
+    line-height: 1.7;
+
+    /* Usa uma cor clara com alto contraste. */
+    color: #F8EFFF;
+
+}
+
+
+/* =========================================================
+   CARTÕES
+   ========================================================= */
+
+/* Estiliza os dois cartões. */
+.card {
+
+    /*
+       inline-block permite que dois cards
+       apareçam na mesma linha.
+    */
+    display: inline-block;
+
+    /*
+       Faz cada cartão ocupar aproximadamente
+       metade da largura disponível.
+    */
+    width: calc(50% - 35px);
+
+    /* Impede que os cartões fiquem excessivamente grandes. */
+    max-width: 600px;
+
+    /*
+       vertical-align: top faz os cartões começarem
+       na mesma altura mesmo se tiverem textos diferentes.
+    */
+    vertical-align: top;
+
+    /*
+       Margin é o espaço EXTERNO.
+       Aqui cria distância entre os cartões.
+    */
+    margin: 15px;
+
+    /*
+       Padding é o espaço INTERNO entre
+       o conteúdo e a borda do cartão.
+    */
+    padding: 30px;
+
+    /* Cria uma borda rosa forte. */
+    border: 3px solid #FF2D95;
+
+    /* Arredonda os cantos. */
+    border-radius: 22px;
+
+    /* Mantém o fundo branco solicitado. */
+    background-color: #FFFFFF;
+
+    /* Define uma cor escura para melhorar o contraste do texto. */
+    color: #24152E;
+
+    /*
+       Como o body está centralizado,
+       voltamos os textos internos para a esquerda.
+    */
+    text-align: left;
+
+    /* Cria profundidade e destaque em relação ao fundo. */
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.45),
+        0 0 18px rgba(255, 45, 149, 0.30);
+
+    /* Cria animações suaves. */
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+/* Cria interação quando o mouse passa sobre o cartão. */
+.card:hover {
+
+    /* Move o cartão levemente para cima. */
+    transform: translateY(-6px);
+
+    /* Intensifica a sombra. */
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.50),
+        0 0 28px rgba(255, 45, 149, 0.45);
+
+}
+
+
+/* =========================================================
+   TÍTULOS DOS CARTÕES
+   ========================================================= */
+
+/* Estiliza os títulos Mito 1 e Mito 2. */
+.card h2 {
+
+    /* Usa a fonte de destaque. */
+    font-family: 'Bebas Neue', Impact, sans-serif;
+
+    /* Define tamanho do título. */
+    font-size: 31px;
+
+    /*
+       Usa um rosa mais escuro.
+       Isso melhora o contraste sobre o fundo branco.
+    */
+    color: #B51268;
+
+    /* Remove margem superior e cria espaço inferior. */
+    margin: 0 0 15px 0;
+
+    /* Aumenta levemente o espaçamento entre letras. */
+    letter-spacing: 1px;
+
+    /* Define uma altura confortável entre linhas. */
+    line-height: 1.1;
+
+}
+
+
+/* =========================================================
+   TEXTOS DOS CARTÕES
+   ========================================================= */
+
+/* Estiliza os parágrafos internos. */
+.card p {
+
+    /* Define o tamanho do texto. */
+    font-size: 16px;
+
+    /* Melhora a leitura aumentando o espaçamento das linhas. */
+    line-height: 1.7;
+
+    /* Cria espaço abaixo do texto. */
+    margin: 0 0 20px 0;
+
+    /* Usa uma cor bem escura para aumentar o contraste. */
+    color: #302638;
+
+}
+
+
+/* =========================================================
+   IMAGENS
+   ========================================================= */
+
+/* Estiliza as imagens dos cartões. */
+.card img {
+
+    /* Faz a imagem funcionar como elemento de bloco. */
+    display: block;
+
+    /* Faz a imagem ocupar toda a largura disponível. */
+    width: 100%;
+
+    /* Mantém uma altura visual padronizada. */
+    height: 230px;
+
+    /* Cria espaço acima e abaixo da imagem. */
+    margin: 20px auto;
+
+    /* Adiciona uma borda laranja. */
+    border: 3px solid #FF7A18;
+
+    /* Arredonda os cantos da imagem. */
+    border-radius: 16px;
+
+    /*
+       Faz a imagem preencher a área sem deformar,
+       cortando apenas partes excedentes.
+    */
+    object-fit: cover;
+
+}
+
+
+/* =========================================================
+   BOTÕES
+   ========================================================= */
+
+/* Regras compartilhadas pelos dois tipos de botão. */
+.btn-modal,
+.btn-like {
+
+    /*
+       Margin cria espaço EXTERNO
+       entre os botões e outros elementos.
+    */
+    margin: 10px 7px 5px 0;
+
+    /*
+       Padding cria espaço INTERNO
+       e aumenta a área clicável.
+    */
+    padding: 12px 20px;
+
+    /* Cria uma borda ao redor do botão. */
+    border: 2px solid transparent;
+
+    /* Deixa os botões arredondados. */
+    border-radius: 30px;
+
+    /* Define o tamanho do texto. */
+    font-size: 15px;
+
+    /* Deixa o texto do botão em negrito. */
+    font-weight: 700;
+
+    /* Mostra a mãozinha ao passar o mouse. */
+    cursor: pointer;
+
+    /* Cria uma animação suave. */
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+
+}
+
+
+/* =========================================================
+   BOTÃO SAIBA MAIS
+   ========================================================= */
+
+/* Estiliza o botão Saiba mais. */
+.btn-modal {
+
+    /* Cria degradê entre rosa e roxo. */
+    background: linear-gradient(
+        90deg,
+        #D41472,
+        #7417A8
+    );
+
+    /* Usa texto branco para alto contraste. */
+    color: #FFFFFF;
+
+    /* Adiciona uma borda rosa escura. */
+    border-color: #A70F60;
+
+}
+
+
+/* Efeito ao passar o mouse. */
+.btn-modal:hover {
+
+    /* Move o botão levemente para cima. */
+    transform: translateY(-3px);
+
+    /* Cria uma sombra rosa. */
+    box-shadow: 0 8px 18px rgba(212, 20, 114, 0.45);
+
+}
+
+
+/* =========================================================
+   BOTÃO CURTIR
+   ========================================================= */
+
+/* Estiliza o botão de curtida. */
+.btn-like {
+
+    /*
+       Usa laranja mais escuro para que
+       o texto branco tenha maior contraste.
+    */
+    background-color: #D85C00;
+
+    /* Define texto branco. */
+    color: #FFFFFF;
+
+    /* Cria uma borda ainda mais escura. */
+    border-color: #A84600;
+
+}
+
+
+/* Efeito ao passar o mouse. */
+.btn-like:hover {
+
+    /* Move o botão para cima. */
+    transform: translateY(-3px);
+
+    /* Cria sombra laranja. */
+    box-shadow: 0 8px 18px rgba(216, 92, 0, 0.40);
+
+}
+
+
+/* =========================================================
+   MODAL
+   ========================================================= */
+
+/* Representa o fundo da janela flutuante. */
+.modal {
+
+    /*
+       position: fixed mantém o modal preso à tela,
+       independentemente da rolagem da página.
+    */
+    position: fixed;
+
+    /* Posiciona no topo da tela. */
+    top: 0;
+
+    /* Posiciona no lado esquerdo. */
+    left: 0;
+
+    /* Faz ocupar 100% da largura. */
+    width: 100%;
+
+    /* Faz ocupar 100% da altura. */
+    height: 100%;
+
+    /*
+       rgba cria um fundo preto com transparência.
+       Isso destaca a janela interna.
+    */
+    background-color: rgba(5, 0, 15, 0.82);
+
+    /* Ativa o Flexbox. */
+    display: flex;
+
+    /* Centraliza horizontalmente. */
+    justify-content: center;
+
+    /* Centraliza verticalmente. */
+    align-items: center;
+
+    /* Cria espaço interno nas bordas da tela. */
+    padding: 20px;
+
+    /* Mantém o modal acima dos outros elementos. */
+    z-index: 1000;
+
+}
+
+
+/* =========================================================
+   ESCONDER O MODAL
+   ========================================================= */
+
+/* Classe utilizada para manter o modal fechado inicialmente. */
+.hidden {
+
+    /*
+       display: none faz o elemento deixar
+       de aparecer visualmente na página.
+    */
+    display: none;
+
+}
+
+
+/* =========================================================
+   CONTEÚDO DO MODAL
+   ========================================================= */
+
+/* Estiliza a caixa interna da janela flutuante. */
+.modal-content {
+
+    /* Fundo branco para alto contraste. */
+    background-color: #FFFFFF;
+
+    /* Define texto escuro. */
+    color: #24152E;
+
+    /* Cria espaço interno. */
+    padding: 35px;
+
+    /* Centraliza o elemento. */
+    margin: auto;
+
+    /* Adiciona uma borda rosa. */
+    border: 3px solid #D41472;
+
+    /* Arredonda os cantos. */
+    border-radius: 22px;
+
+    /* Faz ocupar até 90% da largura disponível. */
+    width: 90%;
+
+    /* Limita a largura máxima. */
+    max-width: 600px;
+
+    /* Mantém os textos alinhados à esquerda. */
+    text-align: left;
+
+    /* Cria sombra de profundidade. */
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.55),
+        0 0 30px rgba(212, 20, 114, 0.35);
+
+    /*
+       Permite posicionar o botão fechar
+       em relação a esta caixa.
+    */
+    position: relative;
+
+}
+
+
+/* =========================================================
+   TÍTULO DO MODAL
+   ========================================================= */
+
+/* Estiliza o título interno do modal. */
+#modal-title {
+
+    /* Utiliza a fonte de destaque. */
+    font-family: 'Bebas Neue', Impact, sans-serif;
+
+    /* Define o tamanho da fonte. */
+    font-size: 32px;
+
+    /* Usa rosa escuro para melhor contraste. */
+    color: #B51268;
+
+    /* Cria espaço abaixo do título. */
+    margin: 0 0 15px 0;
+
+}
+
+
+/* =========================================================
+   BOTÃO FECHAR
+   ========================================================= */
+
+/* Estiliza o X de fechar. */
+.close-btn {
+
+    /*
+       position: absolute permite posicionar
+       o elemento dentro do modal.
+    */
+    position: absolute;
+
+    /* Distância em relação ao topo. */
+    top: 12px;
+
+    /* Distância da lateral direita. */
+    right: 18px;
+
+    /* Define tamanho grande para facilitar o clique. */
+    font-size: 32px;
+
+    /* Deixa o símbolo mais forte. */
+    font-weight: bold;
+
+    /* Usa rosa escuro. */
+    color: #B51268;
+
+    /* Exibe o cursor de clique. */
+    cursor: pointer;
+
+}
+
+
+/* Altera a aparência quando o mouse passa sobre o X. */
+.close-btn:hover {
+
+    /* Muda para laranja. */
+    color: #D85C00;
+
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+   ========================================================= */
+
+/*
+   Quando a tela tiver 850px ou menos,
+   os cartões deixam de ficar lado a lado.
+*/
+@media (max-width: 850px) {
+
+    /* Ajusta os cartões para telas menores. */
+    .card {
+
+        /* Faz cada cartão ocupar quase toda a linha. */
+        width: 100%;
+
+        /* Limita a largura máxima. */
+        max-width: 650px;
+
+        /* Centraliza o cartão e cria espaço vertical. */
+        margin: 15px auto;
+
+        /*
+           Volta para display block,
+           colocando um cartão abaixo do outro.
+        */
+        display: block;
+
+    }
+
+}
+
+
+/*
+   Ajustes específicos para celulares.
+*/
+@media (max-width: 600px) {
+
+    /* Ajusta o espaçamento da página. */
+    body {
+
+        /* Reduz o espaço interno nas laterais. */
+        padding: 25px 15px;
+
+    }
+
+
+    /* Ajusta o título principal. */
+    h1 {
+
+        /* Diminui o título em telas pequenas. */
+        font-size: 38px;
+
+    }
+
+
+    /* Ajusta os cartões. */
+    .card {
+
+        /* Reduz o espaço interno. */
+        padding: 20px;
+
+    }
+
+
+    /* Ajusta as imagens. */
+    .card img {
+
+        /* Diminui a altura da imagem no celular. */
+        height: 190px;
+
+    }
+
+
+    /* Ajusta os botões. */
+    .btn-modal,
+    .btn-like {
+
+        /* Faz o botão ocupar toda a largura disponível. */
+        width: 100%;
+
+        /* Cria espaço entre os botões. */
+        margin: 6px 0;
+
+    }
+
+
+    /* Ajusta o conteúdo do modal. */
+    .modal-content {
+
+        /* Reduz o espaço interno. */
+        padding: 30px 20px;
+
+    }
+
+}

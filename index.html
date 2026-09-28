@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Invasão Alienígena na Escola</title>
+</head>
+
+
+<body>
+   <h1>Mitos e Verdades sobre Sobreviver a uma Invasão Alienígena na Escola</h1>
+
+<p>
+    Se uma nave alienígena pousasse no pátio durante o intervalo, você saberia o que fazer?
+    Vamos investigar alguns dos maiores mitos sobre encontros com extraterrestres em ambiente escolar.
+</p>
+
+<!--
+    A classe "card" identifica cada cartão de conteúdo.
+    Futuramente ela poderá ser usada pelo CSS para estilização
+    e pelo JavaScript para localizar informações do cartão.
+-->
+<div class="card">
+
+    <h2>Mito 1: Se um alienígena chegar à escola, a primeira coisa a fazer é correr</h2>
+
+    <p>
+        Mito! Sair correndo sem saber o que está acontecendo provavelmente só causaria mais confusão.
+        Observar a situação e procurar um local seguro seria uma decisão muito mais inteligente.
+    </p>
+
+    <img
+        src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa"
+        alt="Imagem do espaço representando uma possível invasão alienígena"
+        width="300"
+        height="200"
+    >
+
+    <!--
+        A classe "btn-modal" será utilizada futuramente pelo JavaScript
+        para abrir uma janela com informações adicionais.
+    -->
+    <button class="btn-modal">Saiba mais</button>
+
+    <!--
+        A classe "btn-like" identifica o botão de curtida.
+        O atributo "data-likes" armazenará a quantidade de curtidas.
+        A classe "like-count" identifica o número exibido no botão.
+    -->
+    <button class="btn-like" data-likes="0">
+        ❤️ Curtir (<span class="like-count">0</span>)
+    </button>
+
+</div>
+
+
+<!-- Segundo cartão de conteúdo -->
+<div class="card">
+
+    <h2>Mito 2: Matemática seria inútil durante uma invasão alienígena</h2>
+
+    <p>
+        Mito! Matemática poderia ajudar a calcular distâncias, velocidades,
+        rotas de fuga e até tentar descobrir quanto tempo uma nave levaria
+        para chegar até a Terra.
+    </p>
+
+    <img
+        src="https://images.unsplash.com/photo-1451187580459-43490279c0fa"
+        alt="Planeta Terra visto do espaço"
+        width="300"
+        height="200"
+    >
+
+    <!--
+        A classe "btn-modal" permitirá ao JavaScript identificar
+        quando o usuário deseja visualizar mais informações.
+    -->
+    <button class="btn-modal">Saiba mais</button>
+
+    <!--
+        Cada cartão possui seu próprio contador de curtidas.
+        O JavaScript poderá atualizar futuramente o elemento "like-count".
+    -->
+    <button class="btn-like" data-likes="0">
+        ❤️ Curtir (<span class="like-count">0</span>)
+    </button>
+
+</div>
+
+
+<!--
+    O ID "modal" permitirá que o JavaScript encontre a janela flutuante.
+    A classe "modal" identifica o componente.
+    A classe "hidden" será usada para esconder o modal inicialmente.
+-->
+<div id="modal" class="modal hidden">
+
+    <!--
+        A classe "modal-content" representa o conteúdo interno da janela.
+    -->
+    <div class="modal-content">
+
+        <!--
+            A classe "close-btn" permitirá ao JavaScript identificar
+            o botão responsável por fechar o modal.
+        -->
+        <span class="close-btn">&times;</span>
+
+        <!--
+            Os IDs abaixo permitirão que o JavaScript altere
+            dinamicamente o título e o texto exibidos no modal.
+        -->
+        <h3 id="modal-title"></h3>
+
+        <p id="modal-text"></p>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+    
+</body>
+</html>
